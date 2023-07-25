@@ -11,9 +11,9 @@ import {
 import Auth from '../utils/auth';
 import { removeBookId } from '../utils/localStorage';
 
-import { useQuery } from '../utils/queries';
+import { useQuery } from '@apollo/client';
 import { GET_ME } from '../utils/queries';
-import { useMutation } from '../utils/mutations';
+import { useMutation } from '@apollo/client';
 import { REMOVE_BOOK } from '../utils/mutations';
 
 const SavedBooks = () => {
