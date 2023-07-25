@@ -80,6 +80,7 @@ const SavedBooks = () => {
             );
           })}
         </Row>
+        {error && <div>There was an issue viewing your books</div>}
       </Container>
     </>
   );
