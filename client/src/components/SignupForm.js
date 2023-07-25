@@ -7,8 +7,6 @@ import { useMutation } from '@apollo/client';
 import { ADD_USER } from '../utils/mutations';
 
   const SignupForm = () => {
-    const [validated] = useState(false);
-    const [showAlert, setShowAlert] = useState(false);
     const [formState, setFormState] = useState({
       username: '',
       email: '',
@@ -43,11 +41,9 @@ import { ADD_USER } from '../utils/mutations';
   return (
     <>
       {/* This is needed for the validation functionality above */}
-      <Form noValidate validated={validated} onSubmit={handleFormSubmit}>
+      <Form  onSubmit={handleFormSubmit}>
         {/* show alert if server response is bad */}
-        <Alert dismissible onClose={() => setShowAlert(false)} show={showAlert} variant='danger'>
-          Something went wrong with your signup!
-        </Alert>
+        
 
         <Form.Group className='mb-3'>
           <Form.Label htmlFor='username'>Username</Form.Label>
